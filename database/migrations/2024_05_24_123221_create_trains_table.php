@@ -15,10 +15,10 @@ return new class extends Migration
             $table->id();
             $table->string('agency',100);
             $table->string('departure_station',100);
-            $table->time('departure_time',$precision = 0);
+            $table->dateTime('departure_time',$precision = 0);
             $table->string('arrival_station',100);
-            $table->time('arrival_time',$precision = 0);
-            $table->integer('train_code');
+            $table->dateTime('arrival_time',$precision = 0);
+            $table->string('train_code',20);
             $table->smallInteger('number_carriages');
             $table->boolean('in_time')->default(true);
             $table->boolean('delate')->default(false);
